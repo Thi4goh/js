@@ -1,0 +1,303 @@
+var nome = window.prompt('qual o seu nome?')// vai perguntar o nome e guardar na var
+window.alert('asdfkjhsdlf' + nome) // sinal de mais nesse caso tem a função de concatenação
+
+Comentários:
+Em HTML = <!-- comentário -->
+Em CSS = /* comentário */
+Em JavaScript = // comentário ou /* comentário */
+
+Conversão de tipos:
+String > Number
+Number.parseInt(window.prompt('digite um número:'); /* numero do tipo inteiro */
+Number.parseFloat(window.prompt('digite outro número:')); /* número do tipo real/ flutuante/ com vírgula */
+window.alert(soma);
+
+ou
+simplesmente utilizar Number(window.prompt...)
+
+Number > String
+String(n)
+n.toString()
+
+Formatando Strings
+window.alert('a soma é " + s'); //usa concatenação
+window.alert(`a soma é ${s}`); /* usa template string*/
+
+ATENÇÃO: Template strings devem ser usadas com crases
+com concatenação pode ser usado tanto aspas simples quanto aspas duplas
+
+
+s.length //mostra quantos caracteres tem 
+s.toUpperCase() // deixa tudo em maiúsculas
+s.toLowerCase() /* deixa tudo em minúsculas */
+
+Novo comando:
+document.write('...')
+
+Formatando números:
+n1.toFixed(2) /* para colocar 2 casa decimais*/
+n1.toFixed(2).replace('.', ',') // para alterar algo por outro (nesse caso trocar o ponto pela vírgula)
+
+n1.toLocaleString('pt-BR', {style : 'currency', currency : 'BRL'})
+
+Ordem de Precedência:
+
+()
+**
+* / %
++ -
+
+Primeiro operadores aritiméticos ((), **, *...)
+Segundo os relacionais (>, <, >= ...)
+Terceiro os lógicos (primeiro o não(!) depois o e(&&) e por fim o ou(||))
+Operadores Ternários
+
+Simplicacando:
+n = n + 4 fica n += 4
+n = n **3 fica n **= 3
+n = n % 8 fica n %= 8
+
+Incremento (funciona apenas com o número 1):
+var x = 5
+x = x + 1 fica x++
+x = x - 1 fica x--
+
+Identidade:
+5 == 5 -> true
+5 == '5' -> true
+5 === '5' -> false funciona se for do mesmo valor e do mesmo tipo
+5 !== '5' -> true porque são de tipos diferentes
+
+Operadores Lógicos:
+!  negação (não) (! true == se não for verdadeiro é falso)
+&& conjunção (e)
+|| disjunção (ou)
+
+Operadores Ternários:
+?
+: (se não)
+
+teste ? true : false
+
+exemplos:
+var media = 5.5
+var res = media >= 6 ? 'aprovado' : 'reprovado'
+
+Árvore DOM:
+
+              window
+
+location     document      history
+
+               html
+
+        head         body
+
+    meta title   h1 p   p    div
+
+                      strong
+
+5 métodos de acesso para navegar na árvore DOM:
+por Marca (getElementsByTagName())
+por ID (getElementsByID())
+por Nome (getElementsByName())
+por Classe (getElementsByClassName())
+por Seletor (querySelector() && querySelectorAll())
+
+Eventos DOM:
+mouseenter
+mousemove
+mousedown
+mouseup
+click
+mouseout
+
+Funções:
+{
+  bloco
+}
+Function ação(paramêtro){
+
+} 
+
+Condições:
+
+if(condição){
+true
+}
+else{
+false
+}
+
+console.log para escrever coisas no console
+
+Exemplo:
+var vel = 12
+
+if (vel > 60) {
+    console.log('Você ultrapassou')
+}
+else{
+    console.log('Boa Viagem')
+}
+
+
+Utilizar innerHTMl quando é preciso modificar alguma tag
+Utilizar innerText quando é preciso modificar apenas o texto
+
+Condições Alinhadas:
+if(cond1){
+	bloco1
+}
+else if(cond2){
+	bloco2
+}
+else{
+	bloco3
+}
+
+Condição Multipla:
+switch(expressão){
+	case valor1:
+		bloco
+		break
+	case valor2:
+		console.log('')
+		break
+	case valor3:
+		bloco
+		break
+	default:
+		bloco
+		break
+}
+
+var agora = new Date()
+var diaSem = agora.getDay()
+
+/*
+	0 = Domingo
+	1 = Segunda
+	2 = Terça
+	3 = Quarta
+	4 = Quinta
+	5 = Sexta
+	6 = Sábado
+*/
+
+Observações Exercícios:
+*Para mudar a source de uma tag existente como img por js
+usa se img.src = '...'
+
+*Caso n exista uma tag img por exemplo 
+cria-se através do comando 
+var img = document.createElement('img')
+
+*Para atribuir um valor como por exemplo
+atribuir um id usa-se
+img.setAttribute('id','...')
+
+*Um input do tipo radio pode ser configurado através dos números [0],[1]...
+exemplo:
+if(sex[0].checked){
+....
+}
+
+*res.appendChild(img) para adicionar um elemento ao conteúdo HTML
+
+Loopings:
+
+Estruturas de Repetição(com teste lógico no início):
+while(condição){
+	bloco
+}
+
+Estruturas de Repetição(com teste lógico no final):
+do{
+	bloco
+}while(condição)
+
+Estrutura for:
+
+for(inicio; teste;incremento){
+	bloco
+}
+Exemplo:
+for(var c = 1; c < 5; c++){
+	console.log('sbt')
+}
+
+Arrays:
+
+Variáveis simples: podem armazenar um valor por vez
+Variáveis compostas: podem armazenar varios valores de uma vez (começam com o índice 0)
+
+*****Array/vetor/variável composta 
+é uma variável que tem varios elementos
+cada elemento é composto por seu valor e uma chave de identificação*****
+
+let a = [5,1,4]
+a[3] = 6 (na posição 3 entra o número 6)
+a.push(7) (na ultima posição entra o número 7)
+a.length (comprimento do meu vetor/array, neste caso 5 elementos // final do meu vetor)
+a.sort() (coloca todos os elementos em ordem crescente)
+a.indexOf(7) (buscar valores dentro do array/vetor) 
+
+for(let pos=0;pos<num.length;pos++){
+	console.log('num[pos]')
+}
+
+for(let pos in num){
+	console.log(num[pos])
+
+num.indexOf(7) (buscar valores dentro do array/vetor) 
+***Of tem q ter letra maiúscula***
+
+se o valor não for encontrado vai aparecer -1
+}
+
+
+Funções:
+Chamada Ex:'chamada vocal/verbalizada'; ou Chamada automatica Ex: 'alarme as 8am', 'ta chovendo hoje'
+Parâmetro de Entrada = 'Dinheiro', 'Leite'
+Ação = 'Mercearia'
+Retorno = 'Entregar o Leite'
+
+
+* Funções são ações executadas assim que são chamadas
+ou em decorrência de algum evento.
+
+* Uma função pode receber parânetros e retornar um resultado
+
+function parimp(n){
+	if(n%2==0){
+          return'par'
+	}else{
+          retun'impar'
+	}
+}
+let res = parimp(11)
+console.log(res)
+
+
+a.value = '' (limpa a caixa input apos digitar)
+a.focus() (é como se clicasse dentro da caixa input automaticamente)
+
+Objetos:
+let amigo = {nome: 'José', sexo:'M', peso:85.4, engordar(p){}}
+amigo
+	jose  m  85.4  [function]
+	 nome sx  peso  engordar()
+
+em Array é mais limitado:
+let num = [5, 8, 4]
+num
+	5  8  4
+	 0  1  2
+
+
+
+Em JS usa-se:
+let e const em vez de var para declarar uma variável
+let(quando deseja mudar o valor da variavel mais tarde)
+const(quando não irá mais mudar o valor)

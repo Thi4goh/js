@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Veficando seu País</h1>
+    Digite o seu país atual <input type="text" name="txtp" id="txtp">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="res"></div>
+</body>
+<script>
+    function clicar(){
+        
+        var nac = document.getElementById('txtp')
+        var res = document.getElementById('res')
+        var ctr = (nac.value)
+        res.innerHTML = `<p>Você está em ${ctr} </p>`
+        if (ctr == 'Brasil'){
+            res.innerHTML += '<p>Sua nacionalidade é brasileiro</p>'
+        }
+        else{
+            res.innerHTML += '<p>Você é estrangeiro</p>'
+        }
+        
+    }
+</script>
+</html>

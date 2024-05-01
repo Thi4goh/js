@@ -1,0 +1,28 @@
+body{
+    
+    background-color: #9653d48f;
+    
+}
+img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+section{
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+footer p{
+    text-align: center;
+    color: white;
+}
+div{
+    text-align: center;
+}

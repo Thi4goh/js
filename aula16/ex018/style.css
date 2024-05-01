@@ -1,0 +1,23 @@
+body{
+    background-color: #be9664;
+    
+}
+header h1{
+    color: white;
+    text-align: center;
+}
+section{
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 3px 4px 7px #2b231a75;
+}
+footer p{
+    text-align: center;
+    color: white;
+}
+#list{
+    width: 150px;
+}

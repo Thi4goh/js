@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        h1{
+            text-shadow: 1px 2px #32253d56;
+        }
+        body{
+            background-color: #9466b9;
+            color: bisque;
+            font: normal 20px 'Times New Roman';
+            text-align: center;
+        }
+        div#res{
+            padding-top: 30px;
+            text-shadow: 1px 2px #32253d56;
+            margin: auto;
+            background-color: white;
+            width: 100px;
+            height: 10px;
+        }
+        input{
+            box-shadow: 4px 4px rgba(0, 0, 0, 0.329);
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando</h1>
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="=" onclick="soma()">
+    <div id="res">Resultado</div>
+
+</body>
+<script>
+    function soma(){
+    var tn1 = document.getElementById('txtn1');
+    var tn2 = document.querySelector('input#txtn2');
+    var div = document.getElementById('res')
+    var num1 = Number.parseFloat(tn1.value);
+    var num2 = Number.parseFloat(tn2.value);
+    var s = num1 + num2
+    div.innerHTML = `A soma entre ${num1} e ${num2} fica <strong>${s}</strong>`
+    }
+</script>
+</html>
