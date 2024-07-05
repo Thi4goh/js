@@ -301,3 +301,82 @@ Em JS usa-se:
 let e const em vez de var para declarar uma variável
 let(quando deseja mudar o valor da variavel mais tarde)
 const(quando não irá mais mudar o valor)
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Hora do Dia</h1></header>
+    <main>
+        <section>
+            <div id="txt">
+
+            </div>
+            <div id="foto">
+
+            </div>
+        </section>
+    </main>
+    <footer><p>&copy;CursoemVídeo</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
+
+body{
+    
+    background-color: #9653d48f;
+    
+}
+img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+section{
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+footer p{
+    text-align: center;
+    color: white;
+}
+div{
+    text-align: center;
+}
+
+var data = new Date()
+var hrs = data.getHours()
+var mnt = data.getMinutes()
+var msg = document.getElementById('txt')
+var foto = document.getElementById('foto')
+var img = document.createElement('img')
+if(hrs < 11 ){
+    //manhã
+    img.setAttribute('src','manha.jpg')
+    document.body.style.backgroundColor = '#2c2b2b67'
+}
+else if(hrs < 18) {
+    //tarde
+    img.setAttribute('src','tarde.jpg')
+    document.body.style.backgroundColor = '#9b5f34'
+}
+else{
+    //noite
+    img.setAttribute('src','noite.jpg')
+    document.body.style.backgroundColor = '#7e2335'
+}
+foto.appendChild(img)
+msg.innerHTML = `<p> Agora são ${hrs} horas e ${mnt} minutos </p>`
