@@ -1,23 +1,24 @@
-var data = new Date()
-var hrs = data.getHours()
-var mnt = data.getMinutes()
-var msg = document.getElementById('txt')
-var foto = document.getElementById('foto')
-var img = document.createElement('imagem')
-if(hrs < 11 ){
+var agora = new Date();
+var hora = agora.getHours();
+var min = agora.getMinutes();
+var txt = document.getElementById('txt');
+var foto = document.getElementById('foto');
+var img = document.createElement('img');
+
+txt.innerHTML  = `Agora são ${hora}:${min}`
+if(hora >= 6 && hora < 12){
     //manhã
-    img.innerHTML='<img  src="noite.jpg" alt="">';
-    document.body.style.backgroundColor = '#2c2b2b67'
+    img.setAttribute('src', 'manha.jpg');
+    document.body.style.backgroundColor = 'lightseagreen'
 }
-else if(hrs < 18) {
+else if(hora < 18){
     //tarde
-    img.innerHTML='<img  src="noite.jpg" alt="">';
-    document.body.style.backgroundColor = '#9b5f34'
+    img.setAttribute('src', 'tarde.jpg');
+    document.body.style.backgroundColor = 'peru'
 }
 else{
     //noite
-    img.innerHTML='<img  src="noite.jpg" alt="">';
-    document.body.style.backgroundColor = '#7e2335'
+    img.setAttribute('src', 'noite.jpg');
+    document.body.style.backgroundColor = 'steelblue'
 }
-
-msg.innerHTML = `<p> Agora são ${hrs} horas e ${mnt} minutos </p>`
+foto.appendChild(img);
