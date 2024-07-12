@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{ 
+            margin: 10px;
+        }
+        table{
+            width: 400px;
+            height: 10px;
+        }
+        td{
+            border: 1px solid black;
+
+        }
+        #valor{
+            text-align: end;
+        }
+        button{
+            margin-right: 10px
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    /*let name = 'thiago';
+    document.body.innerHTML = `Meu nome é ${name}`*/
+
+    const product = document.createElement('input');
+    document.body.appendChild(product);
+
+    const price = document.createElement('input');
+    document.body.appendChild(price);
+
+    const add = document.createElement('button');
+    add.textContent = 'Add'
+    document.body.appendChild(add);
+    add.addEventListener('click', adc);
+
+    const btnClear = document.createElement('button');
+    btnClear.textContent = 'Clear';
+    document.body.appendChild(btnClear);
+    btnClear.addEventListener('click', clear)
+
+    let list = []
+    let tabela = document.createElement('table')
+    function adc(){
+        
+        document.body.appendChild(tabela)
+        let tabelaRow = document.createElement('tr')
+        tabela.appendChild(tabelaRow)
+        updateItems();
+        updateValue(); 
+        
+    }
+    function updateItems(){
+        let list = [product.value]
+        let dado = document.createElement('td')
+        dado.setAttribute('id','product')
+        dado.textContent = list
+        tabela.appendChild(dado)
+    }
+    function updateValue(){
+        let list = [price.value]
+        let dado = document.createElement('td')
+        dado.setAttribute('id', 'valor')
+        dado.textContent = `R$${list}`
+        tabela.appendChild(dado)
+    }
+    function clear(){
+        tabela.innerHTML = ''
+        list = []
+
+    }
+</script>
+</html>
