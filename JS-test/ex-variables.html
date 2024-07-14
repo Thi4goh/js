@@ -11,6 +11,7 @@
         table{
             width: 400px;
             height: 10px;
+            
         }
         td{
             border: 1px solid black;
@@ -50,23 +51,24 @@
     let list = []
     let tabela = document.createElement('table')
     function adc(){
-        
         document.body.appendChild(tabela)
         let tabelaRow = document.createElement('tr')
         tabela.appendChild(tabelaRow)
         updateItems();
         updateValue(); 
-        
+        product.value =''
+        price.value =''
     }
+    
     function updateItems(){
-        let list = [product.value]
+        list = product.value
         let dado = document.createElement('td')
         dado.setAttribute('id','product')
         dado.textContent = list
         tabela.appendChild(dado)
     }
     function updateValue(){
-        let list = [price.value]
+        list = price.value;
         let dado = document.createElement('td')
         dado.setAttribute('id', 'valor')
         dado.textContent = `R$${list}`
