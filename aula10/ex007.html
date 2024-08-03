@@ -11,29 +11,61 @@
         body{
             background-color: #9466b9;
             color: bisque;
-            font: normal 20px 'Times New Roman';
+            font: 20px 'Times New Roman';
             text-align: center;
         }
-        div#res{
-            padding-top: 30px;
+        #res{
             text-shadow: 1px 2px #32253d56;
             margin: auto;
-            background-color: white;
-            width: 100px;
-            height: 10px;
+            background-color: #ffffff;
+            width: fit-content;
+            height: fit-content;
+            border-radius: 5px;
+            padding: 5px;
         }
         input{
-            box-shadow: 4px 4px rgba(0, 0, 0, 0.329);
-            border-radius: 6px;
+            box-shadow: 4px 3px rgba(0, 0, 0, 0.329);
+            border-radius: 3px;
+            border: 0px;
+            width: 100px;
         }
+        form{
+            display: flex;
+            justify-content: center;
+        }
+
+        #mais{
+            padding: 0px 10px;
+            
+        }
+        #btn-res input{
+            width: 30px;
+            margin-left: 20px;
+        }
+        
     </style>
 </head>
 <body>
     <h1>Somando</h1>
-    <input type="number" name="txtn1" id="txtn1"> + 
-    <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="=" onclick="soma()">
-    <div id="res">Resultado</div>
+    <form action="" method="post">
+        
+        <div>
+            <label for="txtn1"></label>
+            <input type="number" name="txtn1" id="txtn1" placeholder="Número 1">
+        </div>
+        <div id="mais">+</div>
+        <div>
+            <label for="txtn2"></label>
+            <input type="number" name="txtn2" id="txtn2"
+            placeholder="Número 2">
+        </div>
+        
+        <div id="btn-res">
+            <input type="button" value="=" onclick="soma()">
+        </div>
+    </form>
+    Resultado
+    <div id="res"></div>
 
 </body>
 <script>

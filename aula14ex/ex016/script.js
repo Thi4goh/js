@@ -1,3 +1,6 @@
+
+ini.focus()
+
 function contar(){
     let ini = document.getElementById('ini')
     let fim = document.getElementById('fim')
@@ -25,4 +28,10 @@ function contar(){
         }
     }
         res.innerHTML += `\u{1F3C1}`
+        
+    ini.focus()
+    ini.value =''
+    fim.value ='0'
+    pas.value ='0'
+        
 }

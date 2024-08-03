@@ -16,10 +16,10 @@
         
         var nac = document.getElementById('txtp')
         var res = document.getElementById('res')
-        var ctr = (nac.value)
-        res.innerHTML = `<p>Você está em ${ctr} </p>`
-        if (ctr == 'Brasil'){
-            res.innerHTML += '<p>Sua nacionalidade é brasileiro</p>'
+        var ctr = String(nac.value).toLowerCase()
+        res.innerHTML = `<p>Seu país atual é ${ctr} </p>`
+        if (ctr == 'brasil'){
+            res.innerHTML += '<p>Sua nacionalidade é brasileiro(a)</p>'
         }
         else{
             res.innerHTML += '<p>Você é estrangeiro</p>'
